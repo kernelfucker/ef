@@ -235,6 +235,43 @@ void dscrn(){
 void pk(){
 	char p;
 	if(read(si, &p, 1) == 1){
+		if(p == '\x1b'){
+			char sn[2];
+			if(read(si, &sn[0], 1) != 1) return;
+			if(read(si, &sn[1], 1) != 1) return;
+			if(sn[0] == '['){
+				switch(sn[1]){
+					case 'A':
+						if(end.cursor_y > 0){
+							end.cursor_y--;
+							if(end.cursor_x > end.lines[end.cursor_y].length)
+								end.cursor_x = end.lines[end.cursor_y].length;
+						}
+
+						break;
+					case 'B':
+						if(end.cursor_y < end.num_lines - 1){
+							end.cursor_y++;
+							if(end.cursor_x > end.lines[end.cursor_y].length)
+								end.cursor_x = end.lines[end.cursor_y].length;
+						}
+
+						break;
+					case 'C':
+						if(end.cursor_x < end.lines[end.cursor_y].length)
+							end.cursor_x++;
+						break;
+					case 'D':
+						if(end.cursor_x > 0)
+							end.cursor_x--;
+						break;
+				}
+
+				ps();
+				return;
+			}
+		}
+
 		switch(p){
 			case qkey:
 				if(end.lost){
