@@ -15,4 +15,4 @@ note: for keys you can set yourself from the source
 $ ./ef main.c
 
 # example
-![image](https://github.com/user-attachments/assets/528c196d-2da8-42b1-82b7-d782c29cb01b)
+![image](https://github.com/user-attachments/assets/952f59d4-a4bf-4c1e-8e0d-0ad6bd6eef65)
