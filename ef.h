@@ -22,7 +22,12 @@
 #define tab_stop        4
 #define status_height   1
 #define line_height	1
-#define ef_version      "0.1"
+#define ef_version      "0.2"
+
+#define arrow_up	"\x1b[A"
+#define arrow_down	"\x1b[B"
+#define arrow_right	"\x1b[C"
+#define arrow_left	"\x1b[D"
 
 #define block_cursor	"\x1b[2 q"
 
