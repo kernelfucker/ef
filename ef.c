@@ -115,7 +115,7 @@ void ef(char *file){
 		}
 	}
 
-	snprintf(end.status, sizeof(end.status), "ef: %s | %s | %dx%d | mod: %d",
+	snprintf(end.status, sizeof(end.status), "ef-%s | %s | %dx%d | mod: %d",
 		ef_version, end.file, end.screen_cols, end.screen_rows, end.lost);
 	ps();
 }
@@ -209,7 +209,7 @@ void dscrn(){
 		write(so, "\r\n", 2);
 	}
 
-	snprintf(end.status, sizeof(end.status), "ef: %s | %s | %dx%d | mod: %d",
+	snprintf(end.status, sizeof(end.status), "ef-%s | %s | %dx%d | mod: %d",
 		ef_version, end.file, end.screen_cols, end.screen_rows, end.lost);
 	write(so, end.status, strlen(end.status));
 	int st = end.screen_cols - strlen(end.status);
