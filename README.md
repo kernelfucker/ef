@@ -2,7 +2,7 @@
 powerful text editor
 
 # compile
-$ clang ef.c -o ef -Os
+$ clang ef.c -o ef -Os -s
 
 # usage
 $ ./ef main.c
