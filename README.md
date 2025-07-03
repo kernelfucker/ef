@@ -15,4 +15,4 @@ control-q: quit
 control-s: save
 
 # example
-![image](https://github.com/user-attachments/assets/952f59d4-a4bf-4c1e-8e0d-0ad6bd6eef65)
+![image](https://github.com/user-attachments/assets/32fabbcd-a4ed-4920-9711-317f9076235b)
